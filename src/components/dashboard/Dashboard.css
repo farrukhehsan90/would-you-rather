@@ -1,0 +1,20 @@
+.home:hover{
+    background-color: aquamarine;
+    clip-path: polygon(10% 0,90% 0,100% 100%,0% 100%);
+}
+.new-question:hover{
+    background-color: aquamarine;
+    clip-path: polygon(10% 0,90% 0,100% 100%,0% 100%);
+}
+.leaderboard:hover{
+    background-color: aquamarine;
+    clip-path: polygon(10% 0,90% 0,100% 100%,0% 100%);
+}
+.account:hover{
+    background-color: aquamarine;
+    clip-path: polygon(10% 0,90% 0,100% 100%,0% 100%);
+}
+.logout:hover{
+    background-color: aquamarine;
+    clip-path: polygon(10% 0,90% 0,100% 100%,0% 100%);
+}
