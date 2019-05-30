@@ -1,20 +1,20 @@
 # Would You Rather Project
 
-##Description
+## Description
 
 Would you rather is a polling site for existing/membership users to poll and reach a conclusion together on a common matter , related to any field, be it sports, tech or politics!
 
 Polls are based on two options and the user is given the option to choose from them. On successfull submission of the poll, the user receives a confirmation page with the existing votes on the same poll along with its percentage.
 
-##Installation 
+## Installation 
 
-###Dependencies
+### Dependencies
 npm install or npm i
 
-###Running the project
+### Running the project
 npm start or npm run start
 
-##Starter Description
+## Starter Description
 
 This is the starter code for the final assessment project for Udacity's React & Redux course.
 
