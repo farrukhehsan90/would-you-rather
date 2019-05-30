@@ -70,19 +70,19 @@ render(){
                             determinate:classes.answeredPollPageOptionProgressBar
                         }}
                         color="primary"
-                        value={(question.optionOne.votes.length/Object.keys(users).length)*100}/>
+                        value={(question.optionOne.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100}/>
                         <span style={{
                             display:'inline-block',
                             position:'absolute',
                             top:question.optionOne.votes.includes(user.id)?'35%':'23%',
-                            left:Math.round(Math.floor((question.optionOne.votes.length/Object.keys(users).length)*100))===0?
+                            left:Math.round(Math.floor((question.optionOne.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))===0?
                             '10%'
                             :
-                            `${Math.round(Math.floor((question.optionOne.votes.length/Object.keys(users).length)*100))-10}%`,
-                            color:Math.round(Math.floor((question.optionOne.votes.length/Object.keys(users).length)*100))===0?'#000':'#fff',
+                            `${Math.round(Math.floor((question.optionOne.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))-10}%`,
+                            color:Math.round(Math.floor((question.optionOne.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))===0?'#000':'#fff',
                             fontSize:'140%'
-                        }}>{`${Math.round(Math.floor((question.optionOne.votes.length/Object.keys(users).length)*100))}%`}</span>
-                        <Typography>{`${question.optionOne.votes.length} out of ${Object.keys(users).length} votes`}</Typography>
+                        }}>{`${Math.round(Math.floor((question.optionOne.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))}%`}</span>
+                        <Typography>{`${question.optionOne.votes.length} out of ${(question.optionOne.votes.length+question.optionTwo.votes.length)} votes`}</Typography>
                     </CardContent>
                     </Card>
                         <br/>
@@ -103,19 +103,19 @@ render(){
                             determinate:classes.answeredPollPageOptionProgressBar
                         }}
                         color="primary"
-                        value={(question.optionTwo.votes.length/Object.keys(users).length)*100}/>
+                        value={(question.optionTwo.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100}/>
                         <span style={{
                             display:'inline-block',
                             position:'absolute',
                             top:question.optionTwo.votes.includes(user.id)?'35%':'23%',
-                            left:Math.round(Math.floor((question.optionTwo.votes.length/Object.keys(users).length)*100))===0?
+                            left:Math.round(Math.floor((question.optionTwo.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))===0?
                             '10%'
                             :
-                            `${Math.round(Math.floor((question.optionTwo.votes.length/Object.keys(users).length)*100))-10}%`,
-                            color:Math.round(Math.floor((question.optionTwo.votes.length/Object.keys(users).length)*100))===0?'#000':'#fff',
+                            `${Math.round(Math.floor((question.optionTwo.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))-10}%`,
+                            color:Math.round(Math.floor((question.optionTwo.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))===0?'#000':'#fff',
                             fontSize:'140%'
-                        }}>{`${Math.round(Math.floor((question.optionTwo.votes.length/Object.keys(users).length)*100))}%`}</span>
-                        <Typography>{`${question.optionTwo.votes.length} out of ${Object.keys(users).length} votes`}</Typography>
+                        }}>{`${Math.round(Math.floor((question.optionTwo.votes.length/(question.optionOne.votes.length+question.optionTwo.votes.length))*100))}%`}</span>
+                        <Typography>{`${question.optionTwo.votes.length} out of ${(question.optionOne.votes.length+question.optionTwo.votes.length)} votes`}</Typography>
                     </CardContent>
                     </Card>
                 </Typography>

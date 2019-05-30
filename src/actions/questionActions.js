@@ -65,7 +65,7 @@ export const saveSingleAnswer=(authedUser,qid,answer,history,users,questions,use
                 }
             })
         })
-        .then(answer=>history.push('/dashboard/answered-poll-page'));
+        .then(answer=>history.push(`/dashboard/answered-poll-page/${qid}`));
 }
 
 export const saveNewQuestion=(question,history)=>dispatch=>{

@@ -75,7 +75,7 @@ class Home extends Component {
     }
 
     if(Object.keys(questions).length>0){
-        answeredContent=Object.keys(user.answers).map(answer=>{
+        answeredContent=Object.keys(user.answers).reverse().map(answer=>{
             return (
                 <Card key={answer}>
                     <CardHeader

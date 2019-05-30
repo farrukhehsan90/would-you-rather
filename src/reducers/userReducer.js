@@ -1,4 +1,4 @@
-import { GET_USERS, GET_USER,SET_USER_LOADING, SAVE_QUESTION_ANSWER } from "../actions/types";
+import { GET_USERS, GET_USER,SET_USER_LOADING, SAVE_QUESTION_ANSWER, SAVE_NEW_QUESTION } from "../actions/types";
 
 const initialState={
 
@@ -40,6 +40,22 @@ const userReducer=(state=initialState,action)=>{
                     }
                 }
             }
+
+        case SAVE_NEW_QUESTION:
+            return {
+                ...state,
+                users:{
+                    ...state.users,
+                    [action.payload.author] : {
+                        ...state.users[action.payload.author],
+                        questions: state.users[action.payload.author].questions.concat(action.payload.id)
+                    }
+                },
+                user:{
+                    ...state.user,
+                    questions:state.user.questions.concat(action.payload.id)
+                }
+            } 
         default:
         return state;
     }

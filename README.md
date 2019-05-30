@@ -1,5 +1,21 @@
 # Would You Rather Project
 
+##Description
+
+Would you rather is a polling site for existing/membership users to poll and reach a conclusion together on a common matter , related to any field, be it sports, tech or politics!
+
+Polls are based on two options and the user is given the option to choose from them. On successfull submission of the poll, the user receives a confirmation page with the existing votes on the same poll along with its percentage.
+
+##Installation 
+
+###Dependencies
+npm install or npm i
+
+###Running the project
+npm start or npm run start
+
+##Starter Description
+
 This is the starter code for the final assessment project for Udacity's React & Redux course.
 
 The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
