@@ -26,15 +26,7 @@ class Login extends Component {
   componentDidMount() {
     this.props.getUsers();
     this.props.getQuestions();
-    if(localStorage.getItem('reroutePath')){
-      if(localStorage.getItem('reroutePath').includes('/questions')){
-        this.props.history.push(JSON.parse(localStorage.getItem('reroutePath')));
-      }
-    }
-
-    
-    localStorage.removeItem('reroutePath');
-  }
+   }
 
   onClick=()=>{
    }

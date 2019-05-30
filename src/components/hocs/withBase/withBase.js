@@ -5,12 +5,14 @@ class extends Component {
     state = {  }
 
     componentDidMount(){
+
       }
 
     componentDidUpdate(prevProps,nextProps){
       }
 
     render() {
+
         return (
             <WrappedComponent/>
         );

@@ -1,4 +1,4 @@
-import {GET_QUESTIONS,SAVE_SINGLE_QUESTION,SAVE_QUESTION_ANSWER,SAVE_NEW_QUESTION} from './types';
+import {GET_QUESTIONS,SAVE_SINGLE_QUESTION,SAVE_QUESTION_ANSWER,SAVE_NEW_QUESTION, SHOW_POLL_PAGE} from './types';
 import {_getQuestions,_saveQuestionAnswer, _saveQuestion} from '../assets/_DATA';
 
 export const getQuestions=()=>dispatch=>{
@@ -28,6 +28,7 @@ export const saveSingleAnswer=(authedUser,qid,answer,history,users,questions,use
     };
 
     
+ 
     
     _saveQuestionAnswer(singleAnswer)
         .then(res=>{
@@ -65,7 +66,11 @@ export const saveSingleAnswer=(authedUser,qid,answer,history,users,questions,use
                 }
             })
         })
-        .then(answer=>history.push(`/dashboard/answered-poll-page/${qid}`));
+        .then(answer=>dispatch({
+            type:SHOW_POLL_PAGE,
+            payload:false
+        }))
+        .then(answer=>history.push(`/questions/${qid}`));
 }
 
 export const saveNewQuestion=(question,history)=>dispatch=>{
@@ -76,5 +81,5 @@ export const saveNewQuestion=(question,history)=>dispatch=>{
                 payload:question
             })
         })
-        .then(res=>history.push('/dashboard/questions'))
+        .then(res=>history.push('/'))
 }

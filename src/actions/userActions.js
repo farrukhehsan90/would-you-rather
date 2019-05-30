@@ -20,8 +20,9 @@ export const loginUser=(user,users,history)=>dispatch=>{
     if(Object.keys(users).filter(singleUser=>users[singleUser].id===user).length>0){
       
         const {state}=history.location;
+    
         state===undefined?
-        history.push('/dashboard/questions')
+        history.push('/')
         :history.push(state.from);
 
              return dispatch(
